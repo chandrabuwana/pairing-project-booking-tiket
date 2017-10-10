@@ -6,12 +6,11 @@ module.exports = function(sequelize, DataTypes) {
     email: DataTypes.STRING,
     no_telp: DataTypes.STRING,
     no_booking: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
   });
+
+  Costumer.associate=function(models){
+    Costumer.belongsToMany(models.City,{through:'Booked',foreignKey:'CostumerId'})
+    Costumer.hasMany(models.Booked,{foreignKey:'CityId'})
+  }
   return Costumer;
 };
