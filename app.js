@@ -11,8 +11,12 @@ app.set('view engine', 'ejs');
 
 
 let city=require('./routes/city')
+let costumer=require('./routes/costumer')
 
 app.use('/',city)
+app.use('/costumer',costumer)
+// app.use('/',city)
+
 
 
 app.listen(3005, function(){
