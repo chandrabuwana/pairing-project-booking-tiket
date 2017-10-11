@@ -10,43 +10,6 @@ router.get('/',(req,res)=>{
   })
 })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 6af8d72c7f02ca2162f5f7ef27471b7dcdb463fe
-// router.get('/add',(req,res)=>{
-//   model.Cit
-// })
-// router.get('/add',(req,res)=>{
-//   // res.send('masuk')
-//   model.Costumer.findAll({
-//     where:{
-//       id:req.params.id}
-//       .then(dataCity=>{
-//         res.render('/add',{dataCity:dataCity})
-//     })
-//     model.Costumer.findById({
-//     })
-//   })
-// })
-
-
-// router.post('/add',(req,res)=>{
-// //   // res.send('masuk')
-//     model.Costumer.create({
-//     first_name:req.body.first_name,
-//     last_name:req.body.last_name,
-//     email:req.body.email,
-//     no_telp:req.body.no_telp,
-//     no_booking:req.body.no_booking
-//   })
-//   .then(()=>{
-//     res.redirect('/add')
-//   })
-// })
-
-
 router.post('/',(req,res)=>{
   model.Booked.create({
     CityId:req.params.id,
@@ -73,12 +36,10 @@ router.post('/addcostumer/:id',(req,res)=>{
     first_name:req.body.first_name,
     last_name:req.body.last_name,
     email:req.body.email,
-    no_telp:req.body.no_telp,
-
+    no_telp:req.body.no_telp
+  })
+  .then(()=>{
+    model.data
   })
 })
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 6af8d72c7f02ca2162f5f7ef27471b7dcdb463fe
 module.exports = router;
