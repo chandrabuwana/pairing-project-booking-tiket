@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
     res.render('city',{dataCity:dataCity})
   })
 })
-
+//poiqwepoqwpeoqwpoeqw
 router.post('/',(req,res)=>{
   model.Booked.create({
     CityId:req.params.id,
