@@ -9,8 +9,8 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Costumer.associate=function(models){
-    Costumer.belongsToMany(models.City,{through:'Booked',foreignKey:'CostumerId'})
-    Costumer.hasMany(models.Booked,{foreignKey:'CityId'})
+    // Costumer.belongsToMany(models.City,{through:'Booked',foreignKey:'CostumerId'})
+    // Costumer.hasMany(models.Booked,{foreignKey:'CityId'})
   }
   return Costumer;
 };

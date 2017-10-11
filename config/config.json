@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "postgres",
-    "database": "booking-tiket",
+    "username": "dpangkey",
+    "password": "dpangkey",
+    "database": "FP_P1R",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

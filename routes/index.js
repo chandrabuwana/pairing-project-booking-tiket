@@ -1,9 +1,25 @@
 const express = require('express')
 const router = express.Router()
+const Models = require('../models')
 
 router.get('/', function(req, res){
-  res.render('index', {
-    title: 'Home Page'
+  Models.City.findAll()
+  .then(function(city){
+    res.render('index', {
+      data: city,
+      title: 'Naik Gratis Turun Bayar'
+    })
+  })
+})
+
+router.post('/', function(req, res){
+  Models.Booked.create({
+    CityId: req.body.cityDestination,
+    date_departure: req.body.date
+  })
+  .then(function(book){
+    // res.redirect()
+    res.send(book)
   })
 })
 

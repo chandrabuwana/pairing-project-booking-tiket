@@ -13,39 +13,24 @@ $('#cityDestination').on('change', function(){
 })
 
 // Tab Form Customer
-
-var fn = $('#fn')
-var ln = $('#ln')
-var email = $('#email')
-var phone = $('#phone')
-// console.log(fn)
-fn.on('input', function(){
-  ln.on('input', function(){
-    email.on('input', function(){
-      phone.on('input', function(){
-        if(fn.val() && ln.val() && email.val() && phone.val()){
-          $('#enter-submit').removeAttr('disabled')
-        }
+function onInput(){
+  var fn = $('#fn')
+  var ln = $('#ln')
+  var email = $('#email')
+  var phone = $('#phone')
+  // console.log(fn)
+  fn.on('input', function(){
+    ln.on('input', function(){
+      email.on('input', function(){
+        phone.on('input', function(){
+          if(fn.val() && ln.val() && email.val() && phone.val()){
+            $('#enter-submit').removeAttr('disabled')
+          }
+        })
       })
     })
   })
-})
-
-
-// $( "#submit-id-button" ).click(function() {
-//   $( this ).hide();
-//   /*$( "#submit-id" ).slideUp( "fast", function() {
-//     // Animation complete.
-//   });*/
-//   $( "#enter-id" ).slideDown( "fast", function() {
-//     // Animation complete.
-//   });
-//   $("#enter-id-button").removeAttr('disabled');
-//
-// });
-
-
-
+}
 
 $('.next').click(function(){
     var nextId = $(this).parents('.tab-pane').next().attr("id");
@@ -72,3 +57,5 @@ $('.next').click(function(){
   $('#last').click(function(){
     $('#lastli').addClass('success');
   });
+
+  module.exports = onInput
