@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>No telphone</th>
+        <th>No Booking</th>
+      </thead>
+      <tbody>
+        <tr>
+          <%dataCostumer.forEach(dataC=>{%>
+          <td><%=dataC.id%></td>
+          <td><%=dataC.first_name%></td>
+          <td><%=dataC.last_name%></td>
+          <td><%=dataC.email%></td>
+          <td><%=dataC.no_telp%></td>
+          <td><%=dataC.no_booking%></td>
+        </tr>
+        <%})%>
+      </tbody>
+    </table>
+  </body>
+</html>
