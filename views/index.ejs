@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bootstrap 101 Template</title>
+    <title><%= title %></title>
 
     <!-- Bootstrap -->
     <link href="/js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,194 +19,84 @@
   </head>
   <body>
 
-  <div class="content">
-    <div class="container">
-      <div class="wizard" id="myWizard">
-        <section>
-          <h4 class="page-title text-center">Naik Gratis Turun Bayar</h4>
-        </section>
-        <div class="wizard__progress">
-          <ul class="wizard__labels nav nav-tabs">
-            <li style="width:25%;" class="col-xs-12 active">
-              <a href="#create-assignment" data-toggle="tab" data-step="1">
-                <i class="fa fa-folder-open wizard__icon"></i> Flight</a>
-            </li>
-            <li style="width:25%;" class="col-xs-12 ">
-              <a href="#data-person" data-toggle="tab" data-step="2">
-                <i class="fa fa-user wizard__icon"></i> Data Person</a>
-            </li>
-            <li style="width:25%;" class="col-xs-12 ">
-              <a href="#data-booking" data-toggle="tab" data-step="3">
-                <i class="fa fa-list-alt wizard__icon"></i> Data Booking</a>
-            </li>
-            <li style="width:25%;" class="col-xs-12 " id="lastli">
-              <a href="#validate" data-toggle="tab" data-step="4">
-                <i class="fa fa-check wizard__icon"></i> Validate
-              </a>
-            </li>
-          </ul>
-          <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="5" style="width: 25%;"> </div>
-          </div>
-        </div>
-        <div class="tab-content">
-          <div class="tab-pane fade in active" id="create-assignment">
-
-            <section>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label" for="name--first"> Flight Destination</label>
-                    <select name="cityDestination" class="form-control" id="cityDestination">
-                      <option value=""> - City - </option>
-                      <option value="1">1</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label" for="name--first"> Date of Flight</label>
-                    <input type="text" class="form-control input-sm" id="datepicker" placeholder="Date of Flight">
-                  </div>
-                </div>
-                <!-- / end col -->
-              </div>
-            </section>
-            <section class="text-right">
-              <button type="button" class="btn btn-primary btn-sm next" disabled id="continue">Continue</button>
-            </section>
-
-          </div>
-          <div class="tab-pane fade" id="data-person">
-            <section>
-
-              <div class="row">
-
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label" for="nid-type">First Name </label>
-                    <input type="text" class="form-control" name="first_name" id="fn" placeholder="Your First Name">
-                  </div>
-                </div>
-                <!-- / end col -->
-
-
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label" for="nid-country">Last Name</label>
-                    <input type="text" class="form-control" name="last_name" id="ln" placeholder="Your Last Name">
-                  </div>
-                </div>
-
-
-                <div class="col-sm-6">
-                  <!-- ================= country ================= -->
-                  <div class="form-group">
-                    <label class="control-label" for="birth-country">Email</label>
-                    <input type="text" class="form-control" name="email" id="email" placeholder="Your Email Address">
-                  </div>
-                </div>
-                <!-- / end col -->
-
-
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label class="control-label" for="marital-status">Phone </label>
-                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone Number">
-                  </div>
-                </div>
-                <!-- / end col -->
-
-
-              </div>
-              <!-- / end row -->
-
-
-            </section>
-            <section class="text-right">
-              <button type="button" class="btn btn-primary btn-sm next" disabled id="enter-submit">Continue</button>
-            </section>
+    <div class="menu">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">NaikGratisTurunBayar</a>
           </div>
 
-          <div class="tab-pane fade" id="data-booking">
-            <section>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="control-label" for="">
-                      Flight To
-                    </label>
-                    <p>Semarang</p>
-                  </div>
-                </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Flight <span class="sr-only">(current)</span></a></li>
+              <li class="disabled"><a href="#">Data Person</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div>
 
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="control-label" for="">
-                      Date Flight
-                    </label>
-                    <p>Rabu, 11 Oktober 2017</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-12">
-                  <h3>Data Passenger</h3>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="" class="control-label">Name</label>
-                    <p>Widya Magda</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="" class="control-label">Email</label>
-                    <p>widya@gmail.com</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="" class="control-label">Phone</label>
-                    <p>0987654321</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="" class="control-label">No. Booking</label>
-                    <p>876AJB</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="text-right">
-              <button type="button" class="btn btn-primary btn-sm next" id="enter-continue">Continue</button>
-            </section>
-          </div>
-
-          <div class="tab-pane fade" id="validate">
-            <section>
-              <div class="alerts--child alerts--success">
-                <div class="alerts__icon">
-                  <i class="fa fa-check"></i>
-                </div>
-                <div class="alerts__text">
-                  <span class="alerts__type">Success: </span>You've created an assignment!
-                </div>
-
-              </div>
-            </section>
-
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="text-center">Naik Gratis Turun Bayar</h3>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <div class="content">
+      <div class="container">
+        <form action="/" method="post">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Flight</label>
+                <select name="cityDestination" class="form-control">
+                  <option value=""> - city - </option>
+                  <% data.forEach(function(r){ %>
+                    <option value="<%= r.id %>"><%= r.city %></option>
+                  <% }) %>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Date of flight</label>
+                <input type="text" name="date" id="datepicker" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-right">
+              <input type="submit" class="btn btn-primary" value="Continue">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

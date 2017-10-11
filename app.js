@@ -13,8 +13,10 @@ app.set('view engine', 'ejs');
 
 let index = require('./routes/index')
 let city = require('./routes/city')
+// let customer = require('./routes/customer')
 
 app.use('/', index)
+// app.use('/customer', customer)
 // app.use('/', city)
 
 
