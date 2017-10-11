@@ -11,6 +11,10 @@ router.get('/',(req,res)=>{
 })
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6af8d72c7f02ca2162f5f7ef27471b7dcdb463fe
 // router.get('/add',(req,res)=>{
 //   model.Cit
 // })
@@ -43,7 +47,6 @@ router.get('/',(req,res)=>{
 // })
 
 
-=======
 router.post('/',(req,res)=>{
   model.Booked.create({
     CityId:req.params.id,
@@ -74,5 +77,8 @@ router.post('/addcostumer/:id',(req,res)=>{
 
   })
 })
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 6af8d72c7f02ca2162f5f7ef27471b7dcdb463fe
 module.exports = router;

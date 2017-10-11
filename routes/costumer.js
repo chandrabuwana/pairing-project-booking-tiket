@@ -1,6 +1,10 @@
 const express=require('express')
 const router=express.Router()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6af8d72c7f02ca2162f5f7ef27471b7dcdb463fe
 const model=require('../models');
 
 router.get('/',(req,res)=>{
@@ -40,6 +44,8 @@ router.post('/add',(req,res)=>{
 
 
 module.exports = router;
-=======
 const models=require('../models')
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 6af8d72c7f02ca2162f5f7ef27471b7dcdb463fe
