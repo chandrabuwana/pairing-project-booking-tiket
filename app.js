@@ -14,6 +14,14 @@ app.set('view engine', 'ejs');
 let index = require('./routes/index')
 let city = require('./routes/city')
 
+
+let city=require('./routes/city')
+let costumer=require('./routes/costumer')
+
+app.use('/',city)
+app.use('/costumer',costumer)
+// app.use('/',city)
+
 app.use('/', index)
 // app.use('/', city)
 
