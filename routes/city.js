@@ -9,6 +9,10 @@ router.get('/',(req,res)=>{
     res.render('index', {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 530fe588749715ad3beab3acd5f4609ab58b3527
     })
     // res.send(city)
   })
@@ -23,7 +27,11 @@ router.get('/',(req,res)=>{
 //     res.send(book)
 //   })
 // })
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 530fe588749715ad3beab3acd5f4609ab58b3527
 
 // router.get('/add',(req,res)=>{
 //   model.Cit
@@ -87,5 +95,9 @@ router.post('/addcostumer/:id',(req,res)=>{
 
   })
 })
+<<<<<<< HEAD
 >>>>>>> 28df034c7734a5d300829c73d43ec512e163ee0f
+=======
+
+>>>>>>> 530fe588749715ad3beab3acd5f4609ab58b3527
 module.exports = router;
