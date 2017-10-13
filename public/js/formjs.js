@@ -58,4 +58,4 @@ $('.next').click(function(){
     $('#lastli').addClass('success');
   });
 
-  module.exports = onInput
+  // module.exports = onInput

@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="/css/style.css">
 
+    <link rel="stylesheet" href="/css/font-awesome/font-awesome/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="/css/jquery-ui.css">
 
   </head>
@@ -28,58 +30,41 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">NaikGratisTurunBayar</a>
+            <a class="navbar-brand" href="/">NaikGratisTurunBayar</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="/">Flight <span class="sr-only">(current)</span></a></li>
-              <li class="disabled"><a>Data Person</a></li>
+              <li><a href="/">Flight <span class="sr-only">(current)</span></a></li>
+              <li class="active"><a>Data Person</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
     </div>
 
-    <div class="header">
+    <div class="content">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h3 class="text-center">Naik Gratis Turun Bayar</h3>
+            <h3 class="text-center">
+              Naik Gratis Turun Bayar
+            </h3>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="container">
-        <form action="/" method="post">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Flight</label>
-                <select name="cityDestination" class="form-control" id="cityDestination">
-                  <option value=""> - city - </option>
-                  <% data.forEach(function(r){ %>
-                    <option value="<%= r.id %>"><%= r.city %></option>
-                  <% }) %>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Date of flight</label>
-                <input type="text" name="date" id="datepicker" class="form-control">
-              </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div style="margin-top:20px" class="alert alert-success" role="alert">
+              Well Done! Please check your E-mail.
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12 text-right">
-              <input type="submit" disabled id="continue" class="btn btn-primary" value="Continue">
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <a class="btn btn-primary" href="/">Book Again?</a>
           </div>
-        </form>
+        </div>
       </div>
     </div>
 
@@ -90,9 +75,7 @@
     <script src="/js/jquery-ui.js"></script>
     <script>
       $(function(){
-        $('#datepicker').datepicker({
-          dateFormat: 'DD, d / M / yy'
-        })
+        $( "#datepicker" ).datepicker();
       })
     </script>
     <script>
