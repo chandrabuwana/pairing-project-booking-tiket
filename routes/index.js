@@ -18,8 +18,7 @@ router.post('/', function(req, res){
     date_departure: req.body.date
   })
   .then(function(book){
-    // res.redirect()
-    res.send(book)
+    res.redirect(`/dataperson/city/${book.CityId}`)
   })
 })
 

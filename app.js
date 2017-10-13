@@ -12,10 +12,22 @@ app.use(express.static(path.join(__dirname, '/public')))
 app.set('view engine', 'ejs');
 
 let index = require('./routes/index')
-let city = require('./routes/city')
+let dataperson = require('./routes/dataperson')
+let datapassenger = require('./routes/dataPassenger')
+// let city = require('./routes/city')
 // let customer = require('./routes/customer')
 
+
+// let city=require('./routes/city')
+let costumer=require('./routes/costumer')
+
+// app.use('/',city)
+// app.use('/costumer',costumer)
+// app.use('/',city)
+
 app.use('/', index)
+app.use('/dataperson', dataperson)
+app.use('/datapassenger', datapassenger)
 // app.use('/customer', customer)
 // app.use('/', city)
 
